@@ -20,6 +20,11 @@ public class Program2 {
 		List<Department> listAll = departmentDao.findAll();
 		for (Department d : listAll) System.out.println(d);
 		
+		System.out.println("\n==== Test 03: department insert ====");
+		Department newDepartment = new Department(null, "Food");
+		departmentDao.insert(newDepartment);
+		System.out.println("Inserted! New id = " + newDepartment.getId());
+		
 	}
 
 }
